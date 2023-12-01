@@ -14,8 +14,13 @@ let data = `five8b
 3oneeighttwo`;
 
 const myArr = data.split("\n");
+let result = 0;
 
-myArr.forEach((str) => {
-  let firstNum = str.match(/[0-9]+/);
-  console.log(firstNum);
+let total = myArr.forEach((str) => {
+  let numsArr = str.match(/[0-9]+/);
+  const firstNum = parseInt(numsArr[0].charAt(0));
+  const lastNum = parseInt(numsArr[0].slice(-1));
+  let total = firstNum + lastNum;
+  result += total;
+  console.log(result);
 });
