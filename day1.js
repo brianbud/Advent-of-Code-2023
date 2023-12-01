@@ -16,7 +16,6 @@ let data = `five8b
 const myArr = data.split("\n");
 
 myArr.forEach((str) => {
-  Array.from(str).forEach((char) => {
-    console.log(char);
-  });
+  let firstNum = str.match(/[0-9]+/);
+  console.log(firstNum);
 });
